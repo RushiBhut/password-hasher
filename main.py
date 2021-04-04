@@ -3,6 +3,7 @@ import hashlib
 import csv
 
 
+# Called when the register button is clicked and stores the information in a csv file
 def register():
     username = register_username.get()
     password = register_password.get()
@@ -21,6 +22,7 @@ def register():
         file.close()
 
 
+# Called when the login button is clicked and checks the login attempt with csv file
 def login():
     username = login_username.get()
     password = login_password.get()
@@ -44,6 +46,7 @@ def login():
         file.close()
 
 
+# Sets the register window with text entry fields and register button
 def register_window():
     global register_screen
     register_screen = Toplevel(welcome_screen)
@@ -70,6 +73,7 @@ def register_window():
     Button(register_screen, text="Register", width=10, height=1, command=register).pack()
 
 
+# Sets the login window with text entry fields and login button
 def login_window():
     global login_screen
     login_screen = Toplevel(welcome_screen)
@@ -96,6 +100,7 @@ def login_window():
     Button(login_screen, text="Login", width=10, height=1, command=login).pack()
 
 
+# Sets the welcome window that leads to login and register windows
 def welcome_window():
     global welcome_screen
     welcome_screen = Tk()
